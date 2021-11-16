@@ -1,6 +1,10 @@
 @charset "utf-8";
 /* 도깨비 메인 CSS - main.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Yellowtail&display=swap');
+/* 웹폰트 */
+
 html,body{
     margin: 0;
     padding: 0;
@@ -146,11 +150,13 @@ body{
 
 /* 캐릭터 설명 타이틀 */
 .cd h3 {
+    font-family: 'Yellowtail', cursive;
     padding: 5px 10px 0px;
     /* 패딩: 위 양쪽 아래 */
 }
 /* 캐릭터 설명 문단 */
 .cd p {
+    font-family: 'Press Start 2P', cursive;
     padding: 10px;
     /* 패딩: 4방향 */
     text-align: justify;
