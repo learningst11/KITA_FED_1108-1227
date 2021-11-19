@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CGV PJ 메인 CSS - main.css */
+
+@import url(reset.ss);
+@import url(core.css);
+
+body{
+    background-color: #000;
+}
