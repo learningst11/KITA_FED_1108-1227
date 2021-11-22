@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <title>Robot PJ</title>
     <style>
-        html,
-        body {
+        html,body{
             margin: 0;
             padding: 0;
         }
-
-        body {
+        body{
             /* background: 색이반고윙/크; */
             background: url(./images/bg.jpg) no-repeat fixed top/cover;
             overflow-x: hidden;
@@ -23,7 +20,7 @@
         } */
 
         /* 로봇 페이지 로고 */
-        h1#logo {
+        h1#logo{
             position: fixed;
             top: calc(50% - 100px);
             left: calc(50% - 100px);
@@ -33,8 +30,7 @@
             width: 200px;
             height: 200px;
             border: 2px solid #ccc;
-            border-radius: 50%;
-            /* 원 */
+            border-radius: 50%;/* 원 */
 
             margin: 0;
             /* h1요소의 기본마진 반드시 없앨것!!! */
@@ -50,7 +46,7 @@
             /* 글자그림자: x y blur 색 */
 
             box-shadow: 0 0 20px 5px pink,
-                inset 0 0 20px 5px #000;
+                        inset 0 0 20px 5px #000;
 
             /* 
                 [ 박스 그림자 - box-shadow ]
@@ -60,8 +56,10 @@
                 2) x축 y축 - 그림자 이동
                 3) blur - 그림자 경계선 흐림(px단위)
                 4) spread - 그림자 크기(생략가능, 박스그림자에만 있음)
+
                 -> 위의 셋팅법으로 콤마를 사용하면 여러 그림자 효과를
                 줄수 있다!
+
             */
 
             /* 배경 */
@@ -70,56 +68,32 @@
             /* 배경위치: 가로 세로 */
             background-size: 160px;
 
-            /* 처음에 로고 2배크기로 보이게함! */
-            transform: scale(2);
-
             /* 애니메이션: 이시이지반방마 */
-            animation: logoAni 2s ease-in-out 2s forwards,
-                logoAni2 .5s ease-in-out 4s infinite alternate;
+            animation: logoAni 2s ease-in-out 2s forwards;
         }
 
 
         /* 로봇 페이지 로고 키프레임 */
         @keyframes logoAni {
-
-            /* 시작값은 초기설정값과 같아서 from(0%)생략! */
-            80% {
+            /* 시작값은 초기설정값과 같아서 from생략! */
+            to{
                 top: 50px;
                 left: 50px;
-                transform: rotate(0deg);
             }
-
-            100% {
-                top: 50px;
-                left: 50px;
-                transform: rotate(-20deg);
-                /* 처음에 흔들기 시작각도로 셋팅! */
-            }
-        }
-
-        /* 키프레임 */
-        /* 로고 흔들기 키프레임 */
-        @keyframes logoAni2 {
-            from {
-                transform: rotate(-20deg);
-            }
-
-            to {
-                transform: rotate(20deg);
-            }
-        }
-
-        /* 키프레임 */
+        } /* 키프레임 */
 
 
         /* 
             *************************************************
             [ CSS로 애니메이션 하기! ]
+
             - 시간에 따라 CSS설정을 변경하여 애니메이션을 하도록
             키프레임을 설정하고 이것을 호출함으로 의도된 연출을
             구현하는 것이 CSS 애니메이션이다!
+
             [ 애니메이션 키프레임 만들기 ]
             - 키프레임이란? 애니메이션 장면을 넣는 코드
+
             1. 두장면 키프레임
             @keyframes 키프레임이름 {
                 from{시작CSS설정}
@@ -130,7 +104,9 @@
                 0%{시작CSS설정}
                 100%{끝나는CSS설정}
             }
+
             -> 만약 from설정과 초기설정이 같다면 from 생략가능!
+
             2. 여러장면 키프레임
             @keyframes 키프레임이름 {
                 0%{CSS설정}
@@ -140,10 +116,13 @@
                 90%{CSS설정}
                 100%{CSS설정}
             }
+
             (1) 장면에 대한 시간 계산은 어떻게 하나?
             -> 전체시간 * 설정된%/100
             (2) 전체시간설정은 호출시에 셋팅함
+
             [ 설정된 키프레임 호출하는 방법 ]
+
             animation: 이시이지반방마;
             (이름 시간 이징 지연 반복 방향 마지막상태)
             _________________________________________
@@ -172,7 +151,7 @@
 
 
         /* 로봇머리 */
-        #head {
+        #head{
             position: relative;
             /* 부모자격 */
             left: 150%;
@@ -189,12 +168,10 @@
 
         /* 로봇머리,몸통 키프레임 */
         @keyframes robotAni {
-            to {
+            to{
                 left: 0;
             }
-        }
-
-        /* 키프레임 */
+        }/* 키프레임 */
 
         /* 눈1 */
         #eye1 {
@@ -206,7 +183,6 @@
             height: 50px;
             background: url(./images/e1.jpg) no-repeat 0/100% 100%;
         }
-
         /* 눈2 */
         #eye2 {
             position: absolute;
@@ -217,7 +193,6 @@
             height: 50px;
             background: url(./images/e2.jpg) no-repeat 0/100% 100%;
         }
-
         /* 코 */
         #nose {
             position: absolute;
@@ -228,7 +203,6 @@
             height: 70px;
             background: url(./images/nose.jpg) no-repeat 0/110% 100%;
         }
-
         /* 입 */
         #mouth {
             position: absolute;
@@ -249,13 +223,11 @@
             height: 80px;
             background: url(./images/metal02.jpg) no-repeat 0/100% 100%;
         }
-
         /* 왼쪽귀 */
         #ear1 {
             left: -50px;
             border-radius: 50% 0 0 50%;
         }
-
         /* 오른쪽귀 */
         #ear2 {
             right: -50px;
@@ -298,61 +270,30 @@
             height: 250px;
             background: url(./images/metal02.jpg) repeat-y 0/100%;
         }
-
         /* 왼팔 */
         #arm1 {
             top: -19px;
             left: -50px;
             border-radius: 25px 25px 0 0;
         }
-
         /* 오른팔 */
         #arm2 {
             top: -19px;
             right: -50px;
             border-radius: 25px 25px 0 0;
-            transform: rotate(0deg);
+            transform: rotate(-160deg);
             transform-origin: center 20px;
-
-            /* 애니메이션: 이시이지반방마 */
-            animation: arm2Ani .8s ease-in-out 5s forwards,
-                waving .4s ease-in-out 5.8s infinite alternate;
         }
-
-        /* 오른쪽팔 애니 키프레임 */
-        @keyframes arm2Ani {
-            to {
-                transform: rotate(-160deg);
-            }
-        }
-
-        /* 키프레임 */
-        /* 오른쪽팔 흔들기 키프레임 */
-        @keyframes waving {
-            from {
-                transform: rotate(-160deg);
-            }
-
-            to {
-                transform: rotate(-130deg);
-            }
-        }
-
-        /* 키프레임 */
-
-
         /* 왼다리 */
         #leg1 {
             bottom: -250px;
             left: 0;
         }
-
         /* 오른다리 */
         #leg2 {
             bottom: -250px;
             right: 0;
         }
-
         /* tv */
         #tv {
             position: absolute;
@@ -385,12 +326,11 @@
             left: -25px;
             /* 나의 부모는? #screen */
             width: 200px;
-            border: none;
-            /* 또는 0 -> 보더없앰 */
+            border: none;/* 또는 0 -> 보더없앰 */
         }
 
         /* 로봇설명박스 */
-        #rdesc {
+        #rdesc{
             width: 800px;
             margin: 350px auto 100px;
             /* 마진: 위 양쪽 아래  
@@ -412,10 +352,6 @@
 
         /* 로봇설명제목 */
         #rdesc h2 {
-            position: sticky;
-            top:0;
-            /*stikcy 포지션은 top값에 따라 스크롤시 fixed로 화면에 고정시키는 포지션이다! */
-            background-color: rgba(255, 255, 255, 0.747);
             color: lime;
             /* 글자색 */
             font-size: 35px;
@@ -468,102 +404,13 @@
             color: lightsalmon;
         }
 
-        /* 글박스 유도 링크 */
-        .link {
-            position: absolute;
-            top: 100px;
-            right: 50px;
-            font-size: 40px;
-            text-shadow: 2px 2px 2px #000;
-        }
 
-        .link a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        /* 오버시 */
-        .link a:hover {
-            color: #f00;
-            text-decoration: underline;
-        }
-
-        /* 위로가기 버튼 */
-        .btnTop {
-            position: fixed;
-            bottom: 50px;
-            right: 50px;
-            /* fixed는 보이는 화면이 부모다! */
-
-            width: 100px;
-            height: 100px;
-
-            text-align: center;
-            line-height: 100px;
-            border-radius: 50%;
-            background-color: #ccc;
-            color: blue;
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        /* 버튼에 오버시 */
-        .btnTop:hover {
-            background-color: #ff0;
-            color: red;
-        }
-
-        /* 처음에 투명처리 class */
-        .fade {
-            opacity: 0;
-            /* 
-                opacity 속성 - 요소의 투명도 조절
-                0 은 완전투명, 1 은 완전불투명
-                0.몇 소수점은 중간 투명도
-                예) opacity: 0.5 -> 반투명!
-            */
-            /* 애니메이션: 이시이지반방마 */
-            animation: opa .5s ease-in 5s forwards;
-        }
-
-        /* 투명도 변화 키프레임 */
-        @keyframes opa {
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* 키프레임 */
     </style>
 </head>
-
 <body>
-    <!-- 로봇페이지로고 -->
+
+    <!-- 로봇 페이지 로고 -->
     <h1 id="logo">R2D2</h1>
-
-    <!-- 내용보기 링크 타이틀 -->
-    <h2 class="link fade">
-        <a href="#rdesc">What is Robot?</a>
-    </h2>
-    <!-- 
-            a요소에 href속성값으로 "#아이디명"을 사용하면
-            같은 페이지 안에 있는 아이디 요소명 박스의 상단
-            라인 위치로 스크롤이동됨(아이디만 됨!!!)
-            - a요소 기본기능임!
-
-                  -> 만약 href속성값으로 "#아이디명"을 사용한 경우
-        페이지를 이동할때 상단의 url창을 보면
-        "페이지주소#아이디명" 의 형식으로 페이지를 이동한다!
-        예) 
-        http://127.0.0.1:5500/001.HTML학습
-                /005.Robot_PJ/robot.html#rdesc
-        -> 역으로 볼때 페이지주소에 #아이디명 을 뒤에 붙여서
-        호출하면 해당 위치로 바로 이동하여 페이지를 보여준다!
-        -->
-
-    <!-- 위로이동버튼 -->
-    <a href="#" class="btnTop fade">TOP</a>
 
     <!-- 로봇머리 -->
     <div id="head">
@@ -579,7 +426,7 @@
         <div id="ear2" class="ear"></div>
         <!-- 입 -->
         <div id="mouth"></div>
-    </div>
+    </div><!-- #head -->
 
     <!-- 로봇몸통 -->
     <div id="body">
@@ -593,7 +440,7 @@
         <div id="leg1" class="part"></div>
         <!-- 오른다리 -->
         <div id="leg2" class="part"></div>
-        <!-- tv -->
+        <!-- TV -->
         <div id="tv">
             <!-- 스크린 -->
             <div id="screen">
@@ -606,10 +453,11 @@
                     - src 속성: 실제로 불러올 페이지 경로
                     - 스타일 시트에서 width, height, border:0
                     등을 설정해 준다!(기본보더가 있어서 없애야함)
-                -->
+                 -->
             </div><!-- #screen -->
         </div><!-- #tv -->
     </div><!-- #body -->
+
 
     <!-- 로봇소개글 -->
     <div id="rdesc">
@@ -619,52 +467,21 @@
         <small>From Wikipedia, the free encyclopedia</small>
         <!-- 내용단락 -->
         <p>
-            A robot is a machine—especially one programmable by a computer—capable of carrying out a complex series of
-            actions automatically.[2] A robot can be guided by an external control device, or the control may be
-            embedded within. Robots may be constructed to evoke human form, but most robots are task-performing
-            machines, designed with an emphasis on stark functionality, rather than expressive aesthetics.
+            A robot is a machine—especially one programmable by a computer—capable of carrying out a complex series of actions automatically.[2] A robot can be guided by an external control device, or the control may be embedded within. Robots may be constructed to evoke human form, but most robots are task-performing machines, designed with an emphasis on stark functionality, rather than expressive aesthetics.
             <br><br>
-            Robots can be autonomous or semi-autonomous and range from humanoids such as Honda's Advanced Step in
-            Innovative Mobility (ASIMO) and TOSY's TOSY Ping Pong Playing Robot (TOPIO) to industrial robots, medical
-            operating robots, patient assist robots, dog therapy robots, collectively programmed swarm robots, UAV
-            drones such as General Atomics MQ-1 Predator, and even microscopic nano robots. By mimicking a lifelike
-            appearance or automating movements, a robot may convey a sense of intelligence or thought of its own.
-            Autonomous things are expected to proliferate in the future, with home robotics and the autonomous car as
-            some of the main drivers.[3]
+            Robots can be autonomous or semi-autonomous and range from humanoids such as Honda's Advanced Step in Innovative Mobility (ASIMO) and TOSY's TOSY Ping Pong Playing Robot (TOPIO) to industrial robots, medical operating robots, patient assist robots, dog therapy robots, collectively programmed swarm robots, UAV drones such as General Atomics MQ-1 Predator, and even microscopic nano robots. By mimicking a lifelike appearance or automating movements, a robot may convey a sense of intelligence or thought of its own. Autonomous things are expected to proliferate in the future, with home robotics and the autonomous car as some of the main drivers.[3]
             <br><br>
-            The branch of technology that deals with the design, construction, operation, and application of robots,[4]
-            as well as computer systems for their control, sensory feedback, and information processing is robotics.
-            These technologies deal with automated machines that can take the place of humans in dangerous environments
-            or manufacturing processes, or resemble humans in appearance, behavior, or cognition. Many of today's robots
-            are inspired by nature contributing to the field of bio-inspired robotics. These robots have also created a
-            newer branch of robotics: soft robotics.
+            The branch of technology that deals with the design, construction, operation, and application of robots,[4] as well as computer systems for their control, sensory feedback, and information processing is robotics. These technologies deal with automated machines that can take the place of humans in dangerous environments or manufacturing processes, or resemble humans in appearance, behavior, or cognition. Many of today's robots are inspired by nature contributing to the field of bio-inspired robotics. These robots have also created a newer branch of robotics: soft robotics.
             <br><br>
-            From the time of ancient civilization, there have been many accounts of user-configurable automated devices
-            and even automata resembling humans and other animals, designed primarily as entertainment. As mechanical
-            techniques developed through the Industrial age, there appeared more practical applications such as
-            automated machines, remote-control and wireless remote-control.
+            From the time of ancient civilization, there have been many accounts of user-configurable automated devices and even automata resembling humans and other animals, designed primarily as entertainment. As mechanical techniques developed through the Industrial age, there appeared more practical applications such as automated machines, remote-control and wireless remote-control.
             <br><br>
-            The term comes from a Slavic root, robot-, with meanings associated with labor. The word 'robot' was first
-            used to denote a fictional humanoid in a 1920 Czech-language play R.U.R. (Rossumovi Univerzální Roboti –
-            Rossum's Universal Robots) by Karel Čapek, though it was Karel's brother Josef Čapek who was the word's true
-            inventor.[5][6][7] Electronics evolved into the driving force of development with the advent of the first
-            electronic autonomous robots created by William Grey Walter in Bristol, England in 1948, as well as Computer
-            Numerical Control (CNC) machine tools in the late 1940s by John T. Parsons and Frank L. Stulen.
+            The term comes from a Slavic root, robot-, with meanings associated with labor. The word 'robot' was first used to denote a fictional humanoid in a 1920 Czech-language play R.U.R. (Rossumovi Univerzální Roboti – Rossum's Universal Robots) by Karel Čapek, though it was Karel's brother Josef Čapek who was the word's true inventor.[5][6][7] Electronics evolved into the driving force of development with the advent of the first electronic autonomous robots created by William Grey Walter in Bristol, England in 1948, as well as Computer Numerical Control (CNC) machine tools in the late 1940s by John T. Parsons and Frank L. Stulen.
             <br><br>
-            The first modern digital and programmable robot was invented by George Devol in 1954 and spawned his seminal
-            robotics company, Unimation. The first Unimate was sold to General Motors in 1961 where it lifted pieces of
-            hot metal from die casting machines at the Inland Fisher Guide Plant in the West Trenton section of Ewing
-            Township, New Jersey.[8]
+            The first modern digital and programmable robot was invented by George Devol in 1954 and spawned his seminal robotics company, Unimation. The first Unimate was sold to General Motors in 1961 where it lifted pieces of hot metal from die casting machines at the Inland Fisher Guide Plant in the West Trenton section of Ewing Township, New Jersey.[8]
             <br><br>
-            Robots have replaced humans[9] in performing repetitive and dangerous tasks which humans prefer not to do,
-            or are unable to do because of size limitations, or which take place in extreme environments such as outer
-            space or the bottom of the sea. There are concerns about the increasing use of robots and their role in
-            society. Robots are blamed for rising technological unemployment as they replace workers in increasing
-            numbers of functions.[10] The use of robots in military combat raises ethical concerns. The possibilities of
-            robot autonomy and potential repercussions have been addressed in fiction and may be a realistic concern in
-            the future.
+            Robots have replaced humans[9] in performing repetitive and dangerous tasks which humans prefer not to do, or are unable to do because of size limitations, or which take place in extreme environments such as outer space or the bottom of the sea. There are concerns about the increasing use of robots and their role in society. Robots are blamed for rising technological unemployment as they replace workers in increasing numbers of functions.[10] The use of robots in military combat raises ethical concerns. The possibilities of robot autonomy and potential repercussions have been addressed in fiction and may be a realistic concern in the future.
         </p>
     </div>
+    
 </body>
-
 </html>
