@@ -1,77 +1,171 @@
 @charset "utf-8";
-/* CGV PJ 메인 CSS - main.css */
+/* CGV PJ 메인 CSS  - main.css */
 
+/* 외부파일 합치기 */
 @import url(reset.css);
 @import url(core.css);
 
-body{
-    background-color: #000;
+html{
+    height: 100%;
 }
+
+body {
+    background-color: #000;
+    height:100%;
+}
+
 
 /* 레이아웃 공통 클래스 */
 .part{
     max-width: 1200px;
     /* 확장성 있는 셋팅!
-    width:1200px로 코딩하면 작은 화면에서는 가로 스크롤이 생김
-    -> 미디어쿼리를 사용하기전 화면에 적응하는 속성 셋팅이 필요하다!
-    max-width:1200px은 1200px보다 큰 화면에서 중앙 정렬되게 크기를 유지하다가 작아지면
-    화면에 붙어서 auto로 작돋ㅇ함*/
+    width:1200px로 코딩하면 작은 화면에서는
+    가로 스크롤이 생김-> 미디어쿼리를 사용하기전
+    화면에 적응하는 속성 셋팅이 필요하다! 
+    max-width: 1200px은 1200px보다 큰 화면에서
+    중앙 정렬되게 크기를 유지하다가 작아지면
+    화면에 붙어서 auto로 작동함! */
     margin: 0 auto;
     outline: 3px dotted yellow;
 }
 
-/**********************************1. 상단영역 *************************************/
+/*************** 1. 상단영역 ***************/
 #top{
     position: relative;
     /* 부모자격 - .gnb */
-    height: 80px;
-    background: url(../images/curtain.jpg) repeat-x;
+    height: 20%;
+    background: url(../images/curtain.jpg) repeat;
 }
+/* 1-1.페이지 타이틀 */
 h1.tit{
-    /* height: 100%; */ /* 안줘도 줄간격이 높이를 만들어줌 */
+    /* height: 100%; 
+    - 안줘도 줄간격이 높이를 만들어줌 */
     color: aquamarine;
-    font-size:40px;
+    font-size: 40px;
     line-height: 80px;
-    /* 글자 세로 중앙정렬 높이값과 같은 줄간격 */
+    /* 글자 세로 중앙정렬 높이값과 같은 줄간격! */
     text-align: center;
     font-family: 'Jua', sans-serif;
-    /* 웹폰트 주아체 */
-    
+    /* 웹폰트 - 주아체 */
+
     /* 그림자를 이용한 Glow효과 */
-    text-shadow: 0 0 12px aquamarine;    
+    text-shadow: 0 0 12px aquamarine;
+}
+
+.gnb{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    /* 나의 부모는? #top */
+    z-index: 999;
+}
+
+/* GNB li리스트 */
+.gnb li{
+    padding: 0 10px;
+}
+/* GNB 서브메뉴 */
+.smenu{
+    position: absolute;;
     
 }
-/********************************* 2. 메인영역 *************************************/
+
+/*************** 2. 메인영역 ***************/
 #cont{
-    position:relative;
-    /* 부모자격-하위요소? */
-    height: 788px;
+    position: relative;
+    /* 부모자격 - 하위요소 */
+    /* height: 788px; */
+    /* 비율유지설정위해 height값 뺀다 */
     background: url(../images/bg.jpg) no-repeat;
+    background-size: 100%;
+    /* 배경이미지 가로를 기준으로 비율변경! */
 }
 /* 2-1.스크린박스 */
 #screen {
     position: absolute;
-    top: 136px;
-    left: 257px;
+    top: 17.2%;
+    left: 21.3%;
     /* 나의 부모는? #cont */
-    width: 701px;
-    height: 398px;
+    width: 59%;
+    height: 50.5%;
     background-color: #000;
 }
-/* 스크린 아이프레임 */
 #screen iframe {
     width: 100%;
     height: 100%;
     border: none;
     /* 기본보더 없앰 */
 }
-/* 2-2. 예고편선택메뉴 */
+/* 2-2.예고편선택메뉴 */
 .mlist{
     position: absolute;
-    bottom: 3%;
-    left: 20%;
+    bottom: 6%;
+    left: 50%;
+    /* 나의 부모는? .cont */
+    transform: translateX(-50%);
+    /* 자기크기의 절반만큼 반대방향(왼쪽)이동 */
+    width: 60%;
+    outline: 4px dashed yellow;
 }
-/********************************* 3. 하단영역 *************************************/
+/* li디자인 */
+.mlist ul>li{
+    position: relative;
+    /* 부모자격! */
+    width: 14.66%;
+    /* 6등분(16.66%) - 양쪽마진2% */
+    margin: 0 1%;
+    
+    overflow: hidden;
+    /* .movtxt의 부모자격요소에 줘야 적용됨! */
+}
+/* 포스터 이미지 */
+.mlist img{
+    width: 100%;
+    /* 가로만 li박스에 채움!
+    세로는 자동으로 비율유지함! */
+}
+
+/* 영화정보박스 */
+.movtxt{
+    position: absolute;
+    /* left는 설정하지 않고 젠틀하게 처리함!
+    -> 각 li위치에 그대로 있음! */
+    top: 100%;
+    /* 나의 부모는? .mlist ul>li */
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(22, 20, 20, 0.397);
+    /* 반투명배경 */
+
+    /* 글자셋팅 */
+    font-family: 'Cute Font', cursive;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    
+    transition:top .4s ease-out;
+}
+/* 상위li에 오버시 .movtxt top값 변경 */
+.mlist>ul>li:hover .movtxt{
+    top:0;
+
+}
+/* 영화정보 li */
+.movtxt li {
+    float: none;
+    /* float해제 */
+}
+/* 첫번째 li는 영화제목 */
+.movtxt li:first-child {
+    color: aqua;
+    font-size: 17px;
+    letter-spacing: -1px;
+    margin-top: 30px;
+}
+
+/*************** 3. 하단영역 ***************/
 #info{
-    height: 100px;
+    height: 10%;
+    /* height: 100px; */
 }
