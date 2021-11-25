@@ -37,11 +37,10 @@
             [ 웹폰트 코딩법 ]
             @font-face{
                 font-family: 웹폰트명(내가지은이름);
-                src: url(경로/글꼴명.woff) format("woff"), 
+                src: url(경로/글꼴명.woff) format("woff"),
                 url(경로/글꼴명.ttf) format("truetype"),
                 url(경로/글꼴명.eot) format("eot");
             }
-            format을 부쳐주면 빠르게 로딩한다.
 
             -> 간단히 쓰기
             @font-face{
@@ -87,62 +86,65 @@
             - 특히 윤서체 주의!
 
             [ 무료폰트 사이트 ]
-            1. 구글폰트 : fonts.google.com            
+            구글폰트 : 
+            https://fonts.google.com/
              */
-
-             /* san 쎄인트? 성스럽다? 깔끔? serriff가 튀어나온거라면 ssan seriff는 그걸 깔끔하게 깎은것 */
 
             /* 웹폰트 설정 */
 
             /* 독도체 */
             @font-face {
-                font-family: dd; /* 내가직접지은이름! */
+                font-family: dd;/* 내가지은이름! */
                 src: url(./fonts/Dokdo-Regular.woff) format("woff");
             }
-            @font-face{
-                font-family: nb;
+            /* 구기체 */
+            @font-face {
+                font-family: gugi;/* 내가지은이름! */
+                src: url(./fonts/Gugi-Regular.woff) format("woff");
+            }
+            /* 나눔브러쉬체 */
+            @font-face {
+                font-family: nb;/* 내가지은이름! */
                 src: url(./fonts/NanumBrushScript-Regular.woff) format("woff");
             }
-            @font-face{
-                font-family: np;
-                src: url(./fonts/NanumPenScript-Regular.woff) format("woff");
-            }
-            @font-face{
+            /* YujiMai체 */
+            @font-face {
                 font-family: yuji;
                 src: url(./fonts/YujiMai-Regular.woff2) format("woff2");
             }
-
-            @font-face{
+            /* Amatic체 */
+            @font-face {
                 font-family: ama;
-                src: url(./fonts/AmaticSC-Regular.woff2) format("woff2");
+                src: url(./fonts/AmaticSC-Bold.woff2) format("woff2");
             }
-            @font-face{
+            /* Abril체 */
+            @font-face {
                 font-family: abril;
                 src: url(./fonts/AbrilFatface-Regular.woff2) format("woff2");
             }
-
+            
             /* 적용하기 */
-            .wf1{
+            .wf1{/* 독도체 */
                 font-family: dd;
                 color: purple;
             }
-            .wf2{
-                font-family: nb;
+            .wf2{/* 구기체 */
+                font-family: gugi;
                 color: hotpink;
             }
-            .wf3{
-                font-family: np;
+            .wf3{/* 나눔브러쉬체 */
+                font-family: nb;
                 color: rgb(15, 197, 61);
             }
-            .wf4{
+            .wf4{/* YujiMai체 */
                 font-family: yuji;
                 color: rgb(184, 3, 144);
             }
-            .wf5{
+            .wf5{/* Amatic체 */
                 font-family: ama;
                 color: rgb(0, 197, 231);
             }
-            .wf6{
+            .wf6{/* Abril체 */
                 font-family: abril;
                 color: rgb(247, 99, 0);
             }
