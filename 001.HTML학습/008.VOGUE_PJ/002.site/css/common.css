@@ -218,6 +218,29 @@
     color: red;
 }
 
+/******************* 모바일 메뉴 *******************/
+/* 햄버거 버튼 */
+.ham{
+    position: absolute;
+    top: 25px;
+    left: 11px;
+    font-size: 28px;
+    font-weight: bold;
+    transform: scaleX(1.4);
+    line-height: 0;
+    display: none;
+}
+/* 돋보기 버튼 */
+.mag{
+    position: absolute;
+    top: 25px;
+    right: 11px;
+    line-height: 0;
+    font-weight: bold;
+    transform: scale(1.2);
+}
+
+
 
 /******************* 3. 하단영역 *******************/
 .info {
