@@ -1,0 +1,13 @@
+query selector 제일 많이 씀
+
+rem. 10.36
+
+전역변수를 덮을 필요도 없고 블록화 시키기 때문에 let???
+
+10:50 button 
+
+arrow 펑션에서는 this 대신에 event.currentTaret.
+
+예전에는 xml 꺾새로 hirachy 표현 불편
+
+jason 객체안에 객체

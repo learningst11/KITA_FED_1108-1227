@@ -1,5 +1,14 @@
 // 공통기능구현 JS - common.js
 
+
+window.addEventListener("scroll",()=>{
+    let scTop =this.scrollY;
+    console.log("스클로중~~", scTop);
+    
+});
+
+
+
 //////////// 로딩구역 /////////////////////////
 window.addEventListener("DOMContentLoaded",
 function(){
