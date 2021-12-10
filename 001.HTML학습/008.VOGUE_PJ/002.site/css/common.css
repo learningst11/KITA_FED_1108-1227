@@ -5,6 +5,11 @@
             하단영역(하단로고, 회사정보)
 */
 
+/* 부드러운 스크롤 */
+html{
+    scroll-behavior: smooth;
+}
+
 /******************* 1. 상단영역 *******************/
 /* 겉박스 */
 #top {
@@ -28,6 +33,14 @@
 
 /* #top에 클래스 "on"넣을 경우 슬림 사이즈 상단영역변경 */
 
+/* 상단영역 화면에 고정하기 */
+#top.on{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}
 /* 중앙박스에 최소높이값 없앰 */
 #top.on .top {
     min-height: auto;
@@ -42,6 +55,21 @@
 /* 로고이미지 가로크기변경 */
 #top.on .logo img {
     width: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+/* GNB 글자조정 */
+#top.on .gnb{
+    font-size: 14px;
+    line-height: 50px;
+    margin-top: 0;
+    margin-left: 125px;
+}
+#top.on .gnb li{
+    padding-right: 35px;
+}
+#top.on .gnb a{
+    color: #333;
 }
 /* 상단메뉴 없애기 */
 #top.on .tmenu {
@@ -469,4 +497,35 @@
 /* 마지막 li만 두껍게! */
 .blink li:last-child a{
     font-weight: bold;
+}
+
+
+/* 위로가기 버튼 */
+.tbtn{
+    position: fixed;
+    bottom: 0;
+    right: 75px;
+    width: 48px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    background-color: #333;
+    border-radius: 4px 4px 0 0;
+    /* 둥근모서리: 왼위 오른위 오른아래 왼아래 */
+    color: #fff;
+    z-index: 9999;
+    display: none;
+    /* 트랜지션: 속시이지 */
+    transition: all .3s;
+
+}
+
+.tbtn.on{
+    bottom: 0;
+    opacity: 1;
+    transition: opacity .3s;
+}
+/* 탑버튼 마우스 오버시 */
+.tbtn:hover {
+    background-color: #f00;
 }
