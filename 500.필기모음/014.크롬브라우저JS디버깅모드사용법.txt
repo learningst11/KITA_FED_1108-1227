@@ -32,7 +32,8 @@
 
 8. 버그 메시지 몇가지 예:
 
-   (1) 무엇 is not defined -> 변수명 등 잘못 써서 정의 되지 않았다고 메시지가 나온다.
+   (1) 무엇 is not defined 
+   -> 변수명 등 잘못 써서 정의 되지 않았다고 메시지가 나온다.
 
    (2) Uncaught SyntaxError: Unexpected token 
 	- JS 문법이 잘못된 경우 메시지

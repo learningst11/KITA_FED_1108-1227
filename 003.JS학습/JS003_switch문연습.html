@@ -60,14 +60,26 @@
             var isrc;
 
             // 2. 전달된 버튼 이름에 따라 switch문으로 이미지넣기
-            switch(txt){
-                case "포스터": isrc="./images/ala1.jpg";break;
-            }
+            switch (txt) {
+                case "포스터":
+                    isrc = "./images/ala1.jpg";
+                    break;
+                case "장면1":
+                    isrc = "./images/ala4.jpg";
+                    break;
+                case "장면2":
+                    isrc = "./images/ala3.jpg";
+                    break;
+                case "장면3":
+                    isrc = "./images/ala2.jpg";
+                    break;
+            } //////// switch case ///////
+
             // 3. 버튼에 따라 이미지변경
             // 대상: #scene
             // document.getElementById("scene").src = isrc;
             document.getElementById("scene")
-            .setAttribute("src",isrc);
+                .setAttribute("src", isrc);
             // setAttribute(속성명,속성값)
             // - 선택요소의 속성값을 셋팅하는 JS내장함수
             // - 직접 선택후 .속성명으로 셋팅하는 것과

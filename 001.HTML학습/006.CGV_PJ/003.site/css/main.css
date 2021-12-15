@@ -46,8 +46,9 @@ h1.tit {
     /* 웹폰트 - 주아체 */
 
     /* 그림자를 이용한 Glow효과 */
-    text-shadow: 0 0 12px aquamarine;
+    text-shadow: 0 0 4px aquamarine;
 
+    /* 애니메이션: 이시이지반방마 */
     animation: titAni 1.5s ease-in infinite alternate;
 }
 /* 타이틀 그림자 블러애니 */
@@ -59,7 +60,6 @@ h1.tit {
         text-shadow: 0 0 12px aquamarine;
     }
 } /* 키프레임 */
-
 
 /* 1-2.전체메뉴(GNB) */
 .gnb {
@@ -399,15 +399,14 @@ h1.tit {
     margin: 2px;
 
     /* 흑백이미지 설정하기 */
-    filter: grayscale(1);
+    filter: grayscale(100%);
 
     /* outline: 2px dotted lime; */
 }
-/* 마우스 오버시컬러! */
-.sns li:hover{
+/* 마우스 오버시 컬러! */
+.sns li:hover {
     filter: grayscale(0);
 }
-
 /* 페이스북 */
 .sns li:first-child {
     background-position: -509px -429px;
