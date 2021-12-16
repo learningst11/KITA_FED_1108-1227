@@ -59,7 +59,7 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
-    background: url(../images/bg.jpg) no-repeat 0/100% 100%;
+    background: url(../images/bg.jpg) no-repeat 0/100% 100%;          /* 고 윙 크 해석질문드리기 */
 }
 /* 빌딩무너지기 클래스 */
 .building.on{
