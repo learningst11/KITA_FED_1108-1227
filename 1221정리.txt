@@ -1,0 +1,7 @@
+let const 기준
+
+말씀하신 함수니까 let 말고 const 
+
+padding top 기준은 본인가로크기 기준
+
+만약에 자식요소면 부모가로크기 기준
