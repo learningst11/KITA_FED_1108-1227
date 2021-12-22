@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="css/member.css">
     <link rel="stylesheet" href="css/media.css">
     <!-- 미디어쿼리를 본css하단에 link방식으로 넣어준다! -->
-    <script src="js/linksys.js"></script>
-
+    
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/linksys.js"></script>
     <script src="js/member.js"></script>
+    <!-- member.js는 순서중요! 제이쿼리쓰니까! -->
 </head>
 
 <body>
@@ -126,7 +127,7 @@
                 <div class="mwrap">
                     <!-- 입력창박스 -->
                     <div id="search">
-                        <input type="text" placeholder="Search...">
+                        <input type="text" placeholder="Search..." class="search">
                     </div>
                     <!-- 검색버튼 -->
                     <button class="scbtn fi fi-search">
@@ -265,7 +266,7 @@
                                 남성
                                 <input type="radio" name="gen" id="gen1">
                                 여성
-                                <input type="radio" name="gen" id="gen2" checked="">
+                                <input type="radio" name="gen" id="gen2" checked>
                                 <!-- 라디오버튼은 name속성값을 같은
                                 이름으로 하면 하나만 선택되는
                                  그룹핑이된다 
