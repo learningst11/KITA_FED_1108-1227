@@ -2,9 +2,9 @@
 
 /// DB연결 문자열 ///
 $servername = "localhost";//DB서버명
-$username = "learningst11";//DB최고관리자권한
-$password = "dptltql!1278";//FTP비번
-$dbname = "learningst11";//사용DB명
+$username = "tombap";//DB최고관리자권한
+$password = "비번";//FTP비번
+$dbname = "tombap";//사용DB명
 
 /// DB서버와 연결하기 ///
 $conn = new mysqli(
