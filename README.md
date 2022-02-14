@@ -1,6 +1,6 @@
 # KIA
 >기아자동차 공식홈페이지 리뉴얼 프로젝트<br>
->https://learningst11.github.io/Portfolio_KIA/<br><br>
+>https://learningst11.github.io/Portfolio_KIA/<br>
 ## 1. 제작 기간 & 참여 인원
 - 2021년 11월 22일 ~ 2022년 2월 12일
 - 개인 프로젝트<br><br>
@@ -25,7 +25,9 @@
 :pushpin:[코드확인](https://github.com/learningst11/Portfolio_KIA/blob/5248669c8a8040425c25fab4bedbc434904e5ad6/js/car360.js)<br>
 
 ### 4.3 Media Query를 이용한 모바일 지원 가능한 반응형 웹
+- 메인페이지<br>
 ![](https://github.com/learningst11/Portfolio_KIA/blob/93c47b1b4b28a6227752d487f07ea8c35b16fb06/images/main(mobile)_capture.png)<br>
+- 서브페이지<br>
 ![](https://github.com/learningst11/Portfolio_KIA/blob/93c47b1b4b28a6227752d487f07ea8c35b16fb06/images/sub(mobile)_capture.png)<br>
 :pushpin:[코드확인](https://github.com/learningst11/Portfolio_KIA/blob/5248669c8a8040425c25fab4bedbc434904e5ad6/css/media.css)<br><br>
 
