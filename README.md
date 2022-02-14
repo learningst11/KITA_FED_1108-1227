@@ -16,13 +16,6 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br>
 주요 기능은 살리되, 사용자 입장에서 핵심 정보가 한눈에 파악 가능하도록 최적화.</br>
 ## 4. 핵심 기능
-- 메인페이지 각 차량 주행영상 슬라이더
-- 서브페이지 차량 360도 VR이미지 (색상 변경 가능)
-- Media Query를 이용한 모바일 지원 가능한 반응형 웹
-<details>
-<summary><b>핵심 기능 설명 펼치기</b></summary>
-<div markdown="1">
-
 ### 4.1 메인페이지 각 차량 주행영상 슬라이더
 ![](https://github.com/learningst11/Portfolio_KIA/blob/5248669c8a8040425c25fab4bedbc434904e5ad6/images/main_capture.png)
 :pushpin: [코드확인](https://github.com/learningst11/Portfolio_KIA/blob/5248669c8a8040425c25fab4bedbc434904e5ad6/js/slider.js)
